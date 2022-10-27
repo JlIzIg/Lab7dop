@@ -10,9 +10,9 @@ public class SerializeDeserialize {
      */
     public void Serialize(String filename, ArrayList list) {
         try {
-            backupFile(filename);
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            backupFile(filename);
             out.writeObject(list);
             out.close();
             fileOut.close();
